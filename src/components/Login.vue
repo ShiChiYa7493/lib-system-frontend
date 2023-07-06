@@ -48,7 +48,7 @@ export default {
               message: '登录成功！',
               type: 'success'
             })
-            _this.$store.commit('login', _this.loginForm)
+            _this.$store.commit('login', { username: _this.loginForm.username })
             var path = this.$route.query.redirect
             this.$router.replace({path: path === '/' || path === undefined ? '/index' : path})
           } else {
